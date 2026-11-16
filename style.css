@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd6e5,
+        #ffeaf2
+    );
+
+    color: #6d2945;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* Floating Hearts */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    animation: heartMove 8s linear infinite;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes heartMove {
+
+    0% {
+
+        transform: translateY(0);
+
+        opacity: 0;
+
+    }
+
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform: translateY(-110vh);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+
+
+/* Music Button */
+
+#musicButton {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e93670;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+}
+
+
+
+
+
+
+
+/* Hero */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+
+.hero-card {
+
+    width:90%;
+
+    max-width:850px;
+
+    padding:50px 35px;
+
+    background:rgba(255,255,255,0.85);
+
+    border-radius:35px;
+
+    box-shadow:0 20px 60px rgba(200,50,100,0.25);
+
+}
+
+
+
+.top-text {
+
+    color:#e93670;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+h1 {
+
+    font-size:clamp(45px,8vw,90px);
+
+    color:#e52f68;
+
+    margin:20px 0;
+
+}
+
+
+
+h1 span {
+
+    color:#a91d50;
+
+}
+
+
+
+.intro {
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin:15px;
+
+}
+
+
+
+
+
+
+/* Buttons */
+
+.button {
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        #f52d69,
+        #ff77a5
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+}
+
+
+
+.button:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* Cake */
+
+.cake {
+
+    width:190px;
+
+    height:190px;
+
+    margin:20px auto;
+
+    position:relative;
+
+}
+
+
+
+.cake-bottom {
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:15px;
+
+    width:160px;
+
+    height:55px;
+
+    background:#ff6f9c;
+
+    border-radius:15px;
+
+}
+
+
+
+.cake-middle {
+
+    position:absolute;
+
+    bottom:80px;
+
+    left:25px;
+
+    width:140px;
+
+    height:45px;
+
+    background:#ff91b2;
+
+}
+
+
+
+.cake-top {
+
+    position:absolute;
+
+    bottom:125px;
+
+    left:35px;
+
+    width:120px;
+
+    height:35px;
+
+    background:#ffd0df;
+
+}
+
+
+
+.plate {
+
+    position:absolute;
+
+    bottom:10px;
+
+    width:190px;
+
+    height:15px;
+
+    background:white;
+
+    border-radius:50%;
+
+}
+
+
+
+.candle {
+
+    position:absolute;
+
+    bottom:155px;
+
+    left:89px;
+
+    width:12px;
+
+    height:45px;
+
+    background:white;
+
+}
+
+
+
+.flame {
+
+    position:absolute;
+
+    top:-25px;
+
+    left:-3px;
+
+    width:18px;
+
+    height:25px;
+
+    background:orange;
+
+    border-radius:50%;
+
+    animation:flame 0.6s infinite;
+
+}
+
+
+
+@keyframes flame {
+
+    50% {
+
+        transform:scale(1.3);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* Sections */
+
+section {
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+
+
+section h2 {
+
+    font-size:45px;
+
+    color:#d72d62;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+/* Hidden first message */
+
+.hidden-section {
+
+    display:none;
+
+}
+
+
+
+
+
+
+/* Letter */
+
+.letter {
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:left;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+
+}
+
+
+
+.signature {
+
+    text-align:right;
+
+    color:#e93670;
+
+}
+
+
+
+
+
+
+
+/* Gallery */
+
+.gallery {
+
+    max-width:1000px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.photo-card {
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
+/* UPDATED IMAGE STYLE */
+
+.photo-card img {
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    display:block;
+
+}
+
+
+
+
+
+
+
+/* Cards */
+
+.cards {
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+
+.emoji {
+
+    font-size:50px;
+
+}
+
+
+
+
+
+
+
+/* Final Surprise */
+
+.surprise-section {
+
+    background:linear-gradient(
+        135deg,
+        #ff7ba7,
+        #e93670
+    );
+
+    color:white;
+
+}
+
+
+
+.surprise-section h2 {
+
+    color:white;
+
+}
+
+
+
+#surprise-message {
+
+    display:none;
+
+    max-width:750px;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    background:white;
+
+    color:#b52659;
+
+    border-radius:25px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    animation:popup 0.8s ease;
+
+}
+
+
+
+@keyframes popup {
+
+    from {
+
+        opacity:0;
+
+        transform:scale(0.5);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+
+    background:#8d1f49;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+    h1 {
+
+        font-size:45px;
+
+    }
+
+
+    section h2 {
+
+        font-size:35px;
+
+    }
+
+
+    .hero-card {
+
+        padding:35px 20px;
+
+    }
+
+
+    .letter {
+
+        padding:25px;
+
+    }
+
+
+    .photo-card img {
+
+        height:auto;
+
+    }
+
+}
